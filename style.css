@@ -207,6 +207,8 @@ em { font-style: italic; }
   line-height: 1.35;
   margin-bottom: 4px;
 }
+.pub-title a { color: var(--fg); }
+.pub-title a:hover { color: var(--link); text-decoration: none; }
 .pub-authors {
   font-size: 15px;
   margin-bottom: 2px;
