@@ -1,69 +1,72 @@
 # yeojun-site
 
-Personal academic page for **Yeo Jun Choi** — PhD student in AI at Chung-Ang University.
+Personal academic site for **Yeo Jun Choi** — PhD student in AI at Chung-Ang University.
 
-Single-page static HTML, no build step. Inspired by [Jon Barron's site](https://jonbarron.info/).
+Static HTML, no build step. Dark theme. Two pages:
+
+- `index.html` — **about** (bio + news)
+- `publications.html` — **publications** (year-grouped list, no thumbnails)
 
 ## Local preview
 
-Open `index.html` directly in a browser, or:
+Open `index.html` in a browser, or serve the folder:
 
 ```powershell
-# any static server works
 python -m http.server 8000
 # then visit http://localhost:8000
 ```
 
 ## Deploy to GitHub Pages
 
-A GitHub user page lives at `https://<username>.github.io` and must be served from a repo named exactly `<username>.github.io`.
+Already deployed at **https://yeo-jun-choi.github.io** from the repo
+`Yeo-Jun-Choi/Yeo-Jun-Choi.github.io` (branch `main`, path `/`).
+
+To publish updates:
 
 ```powershell
-# 1. create the repo on GitHub (manual or via gh CLI)
-gh repo create Yeo-Jun-Choi.github.io --public --description "Personal page"
-
-# 2. push this folder
-cd e:\cluade\yeojun-site
-git init
-git add .
-git commit -m "Initial personal page"
-git branch -M main
-git remote add origin https://github.com/Yeo-Jun-Choi/Yeo-Jun-Choi.github.io.git
-git push -u origin main
+git -C e:\cluade\yeojun-site add .
+git -C e:\cluade\yeojun-site commit -m "Update site"
+git -C e:\cluade\yeojun-site push
 ```
 
-GitHub Pages activates automatically for `<username>.github.io` repos on the `main` branch. The site appears at https://yeo-jun-choi.github.io within ~1 minute.
+Pages rebuilds automatically within ~1 minute.
 
-## What to customize before going live
+## What to customize
 
 | File / placeholder | What to do |
 |---|---|
+| KBS paper authors/order | `publications.html` — author list for *"Towards Refined Unlearning"* is a best guess (`Yeo Jun Choi, Woo-Seong Yun, Yoon-Sik Cho`). Confirm against the accepted manuscript. |
+| KBS abstract | Inferred from the title only — replace with the real abstract once available. Swap the `journal` link for the DOI when issued. |
 | `assets/profile.jpg` | Replace with a more formal photo when ready (current is the beach photo). |
-| Bio paragraphs in `index.html` | Sanity-check the wording — written from inference, may need tweaks. |
-| Publication abstracts | I drafted short summaries; replace with your own one-liners if preferred. |
 | Email | Currently `csc950411 [at] gmail.com`. Swap for an academic email when you have one. |
 
 ## Structure
 
 ```
 yeojun-site/
-├── index.html        # the whole page
-├── style.css         # styling (Jon Barron-inspired)
-├── README.md         # this file
+├── index.html          # about page (bio + news)
+├── publications.html   # publications page (year-grouped)
+├── style.css           # shared dark-theme styles
+├── README.md           # this file
 └── assets/
-    └── profile.jpg   # 500×667, ~170KB
-    └── cv.pdf        # (you add this)
+    └── profile.jpg     # 500×667, ~170KB
 ```
 
 ## Adding a new publication
 
-In `index.html`, copy any `<div class="pub"> ... </div>` block under the Publications section and edit. Thumbnail color picks from one of these classes (or add your own in `style.css`):
+In `publications.html`, copy a `<div class="pub-entry"> ... </div>` block into the
+correct `<section class="pub-year">` (or add a new year section with an `<h2 class="year-head">`).
+Each entry has: title, authors (wrap your name in `<span class="me">…</span>`),
+venue, links (`paper` / `doi` / `code`), and a short abstract.
+Use `<span class="pub-badge">Accepted</span>` after the title for in-press papers.
 
-- `thumb-asc` (navy)
-- `thumb-recsys` (red)
-- `thumb-llm` (green)
-- `thumb-eswa` (purple)
+Then add a matching news row in `index.html`:
 
-## Adding a news item
+```html
+<tr>
+  <td class="date">2026</td>
+  <td>Paper accepted at <strong>Venue</strong> &mdash; <em>&ldquo;Short Title&rdquo;</em>.</td>
+</tr>
+```
 
-Append a `<tr>` to the `.news-table` in `index.html`. Newest goes on top.
+Newest goes on top.

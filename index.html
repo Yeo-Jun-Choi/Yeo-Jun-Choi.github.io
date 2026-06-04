@@ -4,12 +4,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Yeo Jun Choi</title>
-<meta name="description" content="Yeo Jun Choi — PhD student in AI at Chung-Ang University. Recommender systems, graph neural networks, and LLMs for recommendation." />
+<meta name="description" content="Yeo Jun Choi — PhD student in AI at Chung-Ang University. Recommender systems, graph neural networks, LLMs for recommendation, and machine unlearning." />
 <meta name="author" content="Yeo Jun Choi" />
 
 <!-- Open Graph -->
 <meta property="og:title" content="Yeo Jun Choi" />
-<meta property="og:description" content="PhD student in AI at Chung-Ang University. Recommender systems, GNNs, LLMs for recommendation." />
+<meta property="og:description" content="PhD student in AI at Chung-Ang University. Recommender systems, GNNs, LLMs, machine unlearning." />
 <meta property="og:image" content="assets/profile.jpg" />
 <meta property="og:type" content="profile" />
 
@@ -21,6 +21,15 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- ============== NAV ============== -->
+<nav class="nav">
+  <a class="nav-name" href="index.html">Yeo Jun Choi</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">about</a>
+    <a href="publications.html">publications</a>
+  </div>
+</nav>
 
 <main class="page">
 
@@ -59,7 +68,7 @@
       My research interests lie in <strong>recommender systems</strong>, with a focus on
       graph neural networks, generative models for collaborative filtering, and how
       large language models can be adapted for sequential and personalized recommendation.
-      I am also interested in the long-tail problem in modern recommenders.
+      I am also interested in the long-tail problem and machine unlearning for recommenders.
     </p>
   </section>
 
@@ -68,164 +77,31 @@
     <h2>News</h2>
     <table class="news-table">
       <tr>
-        <td class="date">Jan 2026</td>
-        <td>Our paper <em>&ldquo;GCNs meet long-tail&rdquo;</em> is accepted to <strong>Applied Soft Computing</strong>.</td>
+        <td class="date">2026</td>
+        <td>Paper accepted at <strong>Knowledge-Based Systems</strong> &mdash; <em>&ldquo;Towards Refined Unlearning&rdquo;</em>.</td>
       </tr>
       <tr>
-        <td class="date">Sep 2025</td>
-        <td>Presented <em>&ldquo;Rethinking Overconfidence in VAEs&rdquo;</em> at <strong>ACM RecSys 2025</strong>.</td>
+        <td class="date">2026</td>
+        <td>Paper accepted at <strong>Applied Soft Computing</strong> &mdash; <em>&ldquo;GCNs Meet Long-Tail&rdquo;</em>.</td>
       </tr>
       <tr>
         <td class="date">2025</td>
-        <td>Our work on LLM-based sequential recommendation appears in <strong>IEEE Access</strong>.</td>
+        <td>Paper accepted at <strong>IEEE Access</strong> &mdash; <em>&ldquo;Enhancing LLMs for Sequential Recommendation&rdquo;</em>.</td>
       </tr>
       <tr>
-        <td class="date">Mar 2024</td>
-        <td>Started Ph.D. in the Dept. of AI at Chung-Ang University.</td>
+        <td class="date">2025</td>
+        <td>Paper accepted at <strong>ACM RecSys 2025</strong> &mdash; <em>&ldquo;Rethinking Overconfidence in VAEs&rdquo;</em>.</td>
       </tr>
       <tr>
         <td class="date">2023</td>
-        <td>First-author paper published in <strong>Expert Systems with Applications</strong>.</td>
-      </tr>
-    </table>
-  </section>
-
-  <!-- ============== PUBLICATIONS ============== -->
-  <section class="block">
-    <h2>Publications</h2>
-    <p class="note">
-      <span class="me">Bold</span> indicates equal contribution as first author or myself.
-      See <a href="https://scholar.google.com/citations?user=bfvehToAAAAJ" target="_blank" rel="noopener">Google&nbsp;Scholar</a>
-      for the full list.
-    </p>
-
-    <!-- ============ Paper 1 ============ -->
-    <div class="pub">
-      <div class="pub-thumb thumb-asc">
-        <span>ASC<br/>2026</span>
-      </div>
-      <div class="pub-body">
-        <div class="pub-title">GCNs Meet Long-Tail: Embedding Norm Bias in GCN-based Recommendations</div>
-        <div class="pub-authors">
-          <span class="me">Yeo Jun Choi</span>, Woo-Seong Yun, Chanwoo Jeong, Yoon-Sik Cho
-        </div>
-        <div class="pub-venue">
-          <em>Applied Soft Computing</em>, 2026
-        </div>
-        <div class="pub-links">
-          <a href="https://www.sciencedirect.com/journal/applied-soft-computing" target="_blank" rel="noopener">journal</a>
-        </div>
-        <div class="pub-abstract">
-          We analyze how GCN-based recommenders systematically bias their embedding norms
-          toward popular items, deepening the long-tail problem, and propose a
-          norm-aware mechanism to restore performance on rare items without retraining.
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ Paper 2 ============ -->
-    <div class="pub">
-      <div class="pub-thumb thumb-recsys">
-        <span>RecSys<br/>2025</span>
-      </div>
-      <div class="pub-body">
-        <div class="pub-title">Rethinking Overconfidence in VAEs: Can Label Smoothing Help?</div>
-        <div class="pub-authors">
-          Woo-Seong Yun, <span class="me">Yeo Jun Choi</span>, Yoon-Sik Cho
-        </div>
-        <div class="pub-venue">
-          <em>Proceedings of the 19th ACM Conference on Recommender Systems (RecSys)</em>, pp. 666&ndash;670, 2025
-        </div>
-        <div class="pub-links">
-          <a href="https://dl.acm.org/doi/10.1145/3705328.3748177" target="_blank" rel="noopener">paper</a>
-        </div>
-        <div class="pub-abstract">
-          VAE-based recommenders place overly sharp distributions on a few popular
-          items. We revisit label smoothing as a simple, training-time remedy and
-          show consistent gains across standard CF benchmarks.
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ Paper 3 ============ -->
-    <div class="pub">
-      <div class="pub-thumb thumb-llm">
-        <span>IEEE<br/>Access</span>
-      </div>
-      <div class="pub-body">
-        <div class="pub-title">Enhancing LLMs for Sequential Recommendation with Reversed User History and User Embeddings</div>
-        <div class="pub-authors">
-          <span class="me">Yeo Jun Choi</span>, Woo-Seong Yun, Yoon-Sik Cho
-        </div>
-        <div class="pub-venue">
-          <em>IEEE Access</em>, 2025
-        </div>
-        <div class="pub-links">
-          <a href="https://ieeexplore.ieee.org/" target="_blank" rel="noopener">paper</a>
-        </div>
-        <div class="pub-abstract">
-          Off-the-shelf LLMs underperform on sequential recommendation because the
-          most recent user interactions are buried mid-prompt. We feed history in
-          reversed order and inject lightweight user embeddings, closing the gap with
-          dedicated sequential recommenders while keeping the LLM frozen.
-        </div>
-      </div>
-    </div>
-
-    <!-- ============ Paper 4 ============ -->
-    <div class="pub">
-      <div class="pub-thumb thumb-eswa">
-        <span>ESWA<br/>2023</span>
-      </div>
-      <div class="pub-body">
-        <div class="pub-title">Approaching Feature Matrix: To Solve Two Issues in Link Prediction</div>
-        <div class="pub-authors">
-          <span class="me">Yeo Jun Choi</span>, Yoon-Sik Cho
-        </div>
-        <div class="pub-venue">
-          <em>Expert Systems with Applications</em>, vol. 234, 2023
-        </div>
-        <div class="pub-links">
-          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0957417423015919" target="_blank" rel="noopener">paper</a>
-        </div>
-        <div class="pub-abstract">
-          We tackle two long-standing issues in link prediction&mdash;cold-start nodes
-          and structural sparsity&mdash;by approximating a learnable feature matrix
-          that complements topology-only similarity measures.
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- ============== EDUCATION ============== -->
-  <section class="block">
-    <h2>Education</h2>
-    <table class="edu-table">
-      <tr>
-        <td class="date">2024&nbsp;&ndash;&nbsp;Present</td>
-        <td>
-          <strong>Ph.D. in Artificial Intelligence</strong>, Chung-Ang University<br />
-          <span class="muted">Advisor: Prof. Yoon-Sik Cho</span>
-        </td>
-      </tr>
-      <tr>
-        <td class="date">2022&nbsp;&ndash;&nbsp;2024</td>
-        <td>
-          <strong>M.S. in Artificial Intelligence</strong>, Chung-Ang University<br />
-          <span class="muted">Advisor: Prof. Yoon-Sik Cho</span>
-        </td>
+        <td>Paper accepted at <strong>Expert Systems with Applications</strong> &mdash; <em>&ldquo;Approaching Feature Matrix&rdquo;</em>.</td>
       </tr>
     </table>
   </section>
 
   <!-- ============== FOOTER ============== -->
   <footer>
-    <p>
-      &copy; <span id="year">2026</span> Yeo Jun Choi.
-      Last updated <span id="updated">May 2026</span>.
-      &middot; Site inspired by <a href="https://jonbarron.info/" target="_blank" rel="noopener">Jon Barron</a>.
-    </p>
+    <p>&copy; <span id="year">2026</span> Yeo Jun Choi.</p>
   </footer>
 
 </main>
