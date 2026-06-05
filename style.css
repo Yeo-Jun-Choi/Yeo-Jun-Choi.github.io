@@ -215,6 +215,7 @@ em { font-style: italic; }
   color: var(--fg);
 }
 .pub-authors .me { font-weight: 700; }
+sup.eq { color: var(--link); font-weight: 700; font-size: 0.72em; }
 .pub-venue {
   font-size: 14.5px;
   color: var(--muted);
