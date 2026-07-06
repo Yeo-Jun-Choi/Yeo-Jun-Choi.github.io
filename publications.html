@@ -51,7 +51,19 @@
       <div class="pub-venue">
         <em>Knowledge-Based Systems</em>, 2026 (to appear)
       </div>
-      <div class="pub-abstract"><em>Abstract to appear.</em></div>
+      <div class="pub-links">
+        <a href="https://github.com/sun1187/ERASOR" target="_blank" rel="noopener">code</a>
+      </div>
+      <div class="pub-abstract">
+        Adapting LLMs to a task often involves fine-tuning on data that may contain
+        sensitive information, creating a need for effective unlearning. Existing
+        task-vector-based methods are effective but suffer from entangled
+        representations and overlook the layer-wise roles of Transformers. We propose
+        ERASOR, which applies singular value decomposition to retain-knowledge vectors
+        and a noise-reduction strategy that adjusts each layer's retained subspace
+        dimensionality according to its role. ERASOR attains about 63&ndash;85%
+        unlearning effectiveness with only a 10% reduction in retained knowledge.
+      </div>
     </div>
 
     <!-- SIGIR -->
@@ -63,7 +75,18 @@
       <div class="pub-venue">
         <em>Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval (SIGIR&nbsp;'26)</em>, 2026 (to appear)
       </div>
-      <div class="pub-abstract"><em>Abstract to appear.</em></div>
+      <div class="pub-abstract">
+        Post-training embedding refinement improves recommendation quality, but existing
+        methods refine only item embeddings while keeping user embeddings fixed&mdash;disrupting
+        the alignment the two were jointly trained to share and narrowing the set of
+        recommended items. We propose REFORM, which reformulates post-training as a matrix
+        factorization to jointly realign user and item embeddings. As no target matrix is
+        given, REFORM constructs one that preserves the angular structure of the pre-trained
+        embeddings while incorporating frequency-based confidence signals. REFORM achieves up
+        to 26.9% Recall@20 and 29.2% NDCG@20 improvements over post-training baselines, while
+        maintaining higher effective rank and item coverage and mitigating the
+        accuracy&ndash;diversity trade-off.
+      </div>
     </div>
 
     <!-- ASC -->
